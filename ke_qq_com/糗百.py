@@ -19,7 +19,7 @@ def getText():
     return text
 
 def showText():
-    if page==1 or indexxx==19:
+    if page==1:
         msg=getText()
         page+=1
         txt.delete(1.0,END)
@@ -32,7 +32,12 @@ def showText():
         if indexxx==19:
             indexxx=0
             page+=1
+            msg=getText()
+            txt.delete(1.0,END)
+            txt.insert(1.0,msg[indexxx])
+            indexxx+=1
         else:
+            print indexxx
             txt.delete(1.0,END)
             txt.insert(1.0,msg[indexxx])
             indexxx+=1
