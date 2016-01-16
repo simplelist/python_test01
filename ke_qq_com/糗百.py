@@ -15,7 +15,6 @@ def getText():
     reg=r'<div class="content">([\s\S]+?)<!--.+?-->'
     reg=re.compile(reg)
     text=re.findall(reg,html)
-    print text
     return text
 
 def showText():
@@ -37,7 +36,6 @@ def showText():
             txt.insert(1.0,msg[indexxx])
             indexxx+=1
         else:
-            print indexxx
             txt.delete(1.0,END)
             txt.insert(1.0,msg[indexxx])
             indexxx+=1
